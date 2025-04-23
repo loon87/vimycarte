@@ -1,0 +1,195 @@
+/* Styles spécifiques pour le portail partenaire */
+
+/* Variables */
+:root {
+    --partner-primary: #4e73df;
+    --partner-secondary: #f8f9fa;
+    --partner-success: #1cc88a;
+    --partner-danger: #e74a3b;
+    --partner-warning: #f6c23e;
+    --partner-info: #36b9cc;
+    --partner-dark: #343a40;
+    --partner-light: #f8f9fa;
+    --partner-border: #e3e6f0;
+}
+
+/* Sections du formulaire */
+.form-section-title {
+    font-weight: 600;
+    color: var(--partner-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--partner-border);
+}
+
+/* Cards des expériences */
+.experience-card .card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .card-actions {
+    opacity: 1;
+}
+
+.experience-card .card-actions .btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-card .status {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.experience-card .status i {
+    font-size: 0.6rem;
+}
+
+.experience-card .sales,
+.experience-card .completion {
+    font-size: 0.85rem;
+    color: var(--partner-dark);
+}
+
+/* Timeline pour How It Works */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 2px;
+    background-color: var(--partner-border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-number {
+    position: absolute;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--partner-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.timeline-content {
+    padding-left: 1rem;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-featured {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    z-index: 1;
+    border-top: 3px solid var(--partner-primary);
+}
+
+.pricing-card:hover:not(.pricing-featured) {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.pricing-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+    margin-bottom: 1rem;
+}
+
+.pricing-price .currency {
+    font-size: 1.5rem;
+    font-weight: 500;
+    vertical-align: top;
+    line-height: 1;
+}
+
+.pricing-price .amount {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricing-price .period {
+    font-size: 1rem;
+    color: var(--partner-dark);
+}
+
+.pricing-commission {
+    margin-bottom: 1.5rem;
+}
+
+.pricing-features li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+/* Commission details */
+.commission-details h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.commission-details p {
+    margin-bottom: 0;
+    padding-left: 1.8rem;
+}
+
+.example-scenario h6 {
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--partner-border);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .pricing-featured {
+        transform: scale(1);
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-number {
+        left: -20px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+}

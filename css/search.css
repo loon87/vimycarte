@@ -1,0 +1,442 @@
+/* Styles pour la page de recherche */
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.search-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x800/?quebec-city');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.search-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.search-bar-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.5rem;
+    display: flex;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-container input {
+    flex: 1;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    outline: none;
+}
+
+.search-bar-container button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar-container button:hover {
+    background-color: #3a5a8c;
+}
+
+.search-content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.search-filters {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-section {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1.5rem;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-checkbox input {
+    cursor: pointer;
+}
+
+.filter-checkbox label {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.price-inputs {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.price-inputs input {
+    width: 100px;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.price-slider {
+    width: 100%;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.star.empty {
+    color: #e9ecef;
+}
+
+.search-results {
+    flex: 1;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.results-count {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.results-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results-sort label {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.results-sort select {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.experience-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.2rem;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    color: #4a6fa5;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.card-location {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.8rem;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-rating .stars {
+    display: flex;
+    color: #ffc107;
+}
+
+.card-rating .rating-count {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.no-results p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.load-more button {
+    background-color: transparent;
+    border: 1px solid #4a6fa5;
+    color: #4a6fa5;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.load-more button:hover {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .search-content {
+        flex-direction: column;
+    }
+    
+    .search-filters {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .filter-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .search-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .search-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .search-bar-container {
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+    
+    .search-bar-container input {
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+    }
+    
+    .search-bar-container button {
+        width: 100%;
+        border-radius: 4px;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .filter-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation pour les cartes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.experience-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.experience-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.experience-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.experience-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.experience-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* Styles pour les filtres mobiles */
+.mobile-filter-toggle {
+    display: none;
+    width: 100%;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .mobile-filter-toggle {
+        display: block;
+    }
+    
+    .search-filters {
+        display: none;
+    }
+    
+    .search-filters.active {
+        display: block;
+    }
+}

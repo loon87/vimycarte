@@ -1,0 +1,493 @@
+/* Card Customization Styles */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.user-plan {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Dashboard Navigation */
+.dashboard-navigation {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-navigation li {
+    margin-right: 10px;
+}
+
+.dashboard-navigation a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+}
+
+.dashboard-navigation a:hover {
+    color: var(--primary-color);
+}
+
+.dashboard-navigation a.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Card Customization Section */
+.card-customization-section {
+    margin-bottom: 60px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.customization-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar */
+.customization-sidebar {
+    flex: 1;
+    max-width: 400px;
+}
+
+.sidebar-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.25);
+}
+
+/* Image Upload */
+.image-upload-container {
+    margin-bottom: 10px;
+}
+
+.image-preview {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview.empty {
+    border: 2px dashed #ced4da;
+}
+
+.add-icon {
+    font-size: 2rem;
+    color: #ced4da;
+}
+
+.additional-images {
+    display: flex;
+    gap: 10px;
+}
+
+.image-upload-container.small .image-preview {
+    height: 100px;
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+/* Card Preview */
+.card-preview-container {
+    flex: 2;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+}
+
+.card-preview-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.preview-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.preview-tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: var(--secondary-color);
+}
+
+.preview-tab.active {
+    color: var(--primary-color);
+}
+
+.preview-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.card-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Gift Card Design */
+.gift-card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.gift-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.gift-card-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.gift-card-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.gift-card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.gift-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gift-card-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.gift-card-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.gift-card-description {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.gift-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gift-card-detail {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.detail-icon {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.gift-card-footer {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.gift-card-code {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Personalization Options */
+.personalization-options {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.personalization-options h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.personalization-option {
+    margin-bottom: 10px;
+}
+
+.personalization-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.personalization-option input {
+    margin-right: 10px;
+}
+
+/* Preview Actions */
+.preview-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Existing Cards */
+.existing-cards {
+    margin-bottom: 60px;
+}
+
+.existing-cards h3 {
+    margin-bottom: 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-item-image {
+    height: 150px;
+    overflow: hidden;
+}
+
+.card-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-item-content {
+    padding: 15px;
+}
+
+.card-item-content h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.card-item-content p {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.card-item-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-item-status.active {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+}
+
+.card-item-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.card-item-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 15px 15px;
+}
+
+.card-item.add-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    cursor: pointer;
+    border: 2px dashed #ced4da;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.add-new-content {
+    text-align: center;
+}
+
+.add-new-content .add-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .customization-container {
+        flex-direction: column;
+    }
+    
+    .customization-sidebar {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-navigation ul {
+        flex-wrap: wrap;
+    }
+    
+    .dashboard-navigation li {
+        margin-bottom: 5px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

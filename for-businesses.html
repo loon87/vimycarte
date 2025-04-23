@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fimysolutions - Espace Partenaires</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-placeholder.png" alt="Fimysolutions Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experiences.html">Expériences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">Comment ça marche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="for-businesses.html">Pour les entreprises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-link dropdown-toggle text-decoration-none" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> FR
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="en/for-businesses.html">English</a></li>
+                            <li><a class="dropdown-item" href="es/for-businesses.html">Español</a></li>
+                        </ul>
+                    </div>
+                    <a href="login.html" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="partner-signup.html" class="btn btn-primary">Devenir partenaire</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Rejoignez le réseau Fimysolutions</h1>
+                    <p class="lead mb-4">Augmentez votre visibilité, attirez une clientèle qualifiée et générez des revenus additionnels sans dévaluer vos services.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="partner-signup.html" class="btn btn-primary btn-lg">Devenir partenaire</a>
+                        <a href="#pricing" class="btn btn-outline-primary btn-lg">Voir nos forfaits</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/business-hero-placeholder.jpg" alt="Fimysolutions pour entreprises" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Pourquoi rejoindre Fimysolutions ?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="card-title">Clientèle qualifiée</h4>
+                            <p class="card-text">Accédez à une clientèle premium à la recherche d'expériences authentiques et de qualité, prête à valoriser vos services à leur juste prix.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="card-title">Revenus additionnels</h4>
+                            <p class="card-text">Générez des revenus supplémentaires sans recourir aux rabais massifs qui dévalorisent votre offre et votre image de marque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h4 class="card-title">Visibilité ciblée</h4>
+                            <p class="card-text">Bénéficiez d'une présence sur une plateforme premium qui met en valeur la qualité et l'authenticité de vos services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4 class="card-title">Outils marketing</h4>
+                            <p class="card-text">Profitez de séances photo professionnelles, de contenus de qualité et d'une présence sur nos campagnes marketing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h4 class="card-title">Analyses détaillées</h4>
+                            <p class="card-text">Accédez à des rapports détaillés sur les performances de vos offres et obtenez des insights précieux sur votre clientèle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="card-title">Réseau d'excellence</h4>
+                            <p class="card-text">Intégrez un réseau sélectif d'établissements de qualité et bénéficiez d'opportunités de collaborations croisées.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Comment ça fonctionne pour les partenaires</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content">
+                                <h4>Inscription et candidature</h4>
+                                <p>Complétez notre formulaire de candidature en ligne avec les informations sur votre établissement et vos services.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">2</div>
+                            <div class="timeline-content">
+                                <h4>Évaluation et sélection</h4>
+                                <p>Notre équipe évalue votre candidature selon nos critères de qualité et peut organiser une visite mystère de votre établissement.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">3</div>
+                            <div class="timeline-content">
+                                <h4>Choix du forfait et configuration</h4>
+                                <p>Sélectionnez le forfait qui correspond à vos besoins et configurez votre profil et vos offres sur notre plateforme.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">4</div>
+                            <div class="timeline-content">
+                                <h4>Mise en ligne et promotion</h4>
+                                <p>Vos expériences sont mises en ligne et promues auprès de notre clientèle via notre site, application et campagnes marketing.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">5</div>
+                            <div class="timeline-content">
+                                <h4>Gestion des réservations</h4>
+                                <p>Recevez et gérez les réservations via notre plateforme partenaire intuitive, avec notifications en temps réel.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">6</div>
+                            <div class="timeline-content">
+                                <h4>Paiements et suivi</h4>
+                                <p>Recevez vos paiements de manière régulière et suivez vos performances via votre tableau de bord personnalisé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-2">Nos forfaits partenaires</h2>
+            <p class="text-center mb-5">Choisissez le forfait qui correspond le mieux aux besoins de votre entreprise</p>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100 border-0 shadow-sm">
+                        <div class="card-header bg-white text-center border-0 pt-4">
+                            <h3 class="pricing-title">Essentiel</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <span class="period">/mois</span>
+                            </div>
+                            <div class="pricing-commission">
+                                <span class="badge bg-primary">Commission: 20%</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i> Profil de base sur la plateforme</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Jusqu'à 3 expériences en ligne</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Système de réservation intégré</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Tableau de bord partenaire</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Support par email</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Séance photo professionnelle</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Mise en avant dans les recherches</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Rapports analytiques avancés</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Intégration avec vos systèmes</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Gestionnaire de compte dédié</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white text-center border-0 pb-4">
+                            <a href="partner-signup.html?plan=essential" class="btn btn-outline-primary btn-lg w-100">Choisir ce forfait</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100 border-0 shadow pricing-featured">
+                        <div class="card-header bg-white text-center border-0 pt-4">
+                            <span class="badge bg-primary position-absolute top-0 start-50 translate-middle">Recommandé</span>
+                            <h3 class="pricing-title">Premium</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">99</span>
+                                <span class="period">/mois</span>
+                            </div>
+                            <div class="pricing-commission">
+                                <span class="badge bg-primary">Commission: 15%</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i> Profil premium sur la plateforme</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Jusqu'à 10 expériences en ligne</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Système de réservation intégré</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Tableau de bord partenaire avancé</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Support prioritaire par email et téléphone</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Séance photo professionnelle (10 photos)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Mise en avant dans les recherches</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Rapports analytiques avancés</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Intégration avec vos systèmes</li>
+                                <li class="text-muted"><i class="fas fa-times text-danger me-2"></i> Gestionnaire de compte dédié</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white text-center border-0 pb-4">
+                            <a href="partner-signup.html?plan=premium" class="btn btn-primary btn-lg w-100">Choisir ce forfait</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100 border-0 shadow-sm">
+                        <div class="card-header bg-white text-center border-0 pt-4">
+                            <h3 class="pricing-title">Élite</h3>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">199</span>
+                                <span class="period">/mois</span>
+                            </div>
+                            <div class="pricing-commission">
+                                <span class="badge bg-primary">Commission: 10%</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i> Profil élite sur la plateforme</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Expériences illimitées en ligne</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Système de réservation intégré</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Tableau de bord partenaire complet</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Support VIP 24/7</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Séance photo professionnelle (20 photos)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Placement prioritaire dans les recherches</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Rapports analytiques complets</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Intégration avec vos systèmes</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Gestionnaire de compte dédié</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white text-center border-0 pb-4">
+                            <a href="partner-signup.html?plan=elite" class="btn btn-outline-primary btn-lg w-100">Choisir ce forfait</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="mb-4">Besoin d'une solution personnalisée pour votre entreprise ?</p>
+                <a href="contact.html" class="btn btn-outline-primary">Contactez-nous pour un forfait sur mesure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission System -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Notre système de commission transparent</h2>
+                    <p class="lead mb-4">Chez Fimysolutions, nous croyons en un modèle économique équitable et transparent pour tous nos partenaires.</p>
+                    
+                    <div class="commission-details mb-4">
+                        <h5><i class="fas fa-percentage text-primary me-2"></i> Taux de commission flexible</h5>
+                        <p>Notre taux de commission varie entre 10% et 20% selon le forfait choisi, vous permettant d'optimiser votre modèle économique.</p>
+                    </div>
+                    
+                    <div class="commission-details mb-4">
+                        <h5><i class="fas fa-calculator text-primary me-2"></i> Calcul simple et transparent</h5>
+                        <p>La commission est calculée uniquement sur le montant des ventes réalisées via notre plateforme, sans frais cachés ni surprises.</p>
+                    </div>
+                    
+                    <div class="commission-details mb-4">
+                        <h5><i class="fas fa-money-bill-wave text-primary me-2"></i> Paiements rapides et réguliers</h5>
+                        <p>Recevez vos paiements deux fois par mois, avec un délai de traitement minimal et un historique détaillé de toutes vos transactions.</p>
+                    </div>
+                    
+                    <div class="commission-details">
+                        <h5><i class="fas fa-chart-bar text-primary me-2"></i> Suivi en temps réel</h5>
+                        <p>Suivez vos ventes et commissions en temps réel via votre tableau de bord partenaire, avec des rapports détaillés et exportables.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title text-center mb-4">Exemple de calcul de commission</h4>
+                            
+                            <div class="example-scenario mb-4">
+                                <h6 class="mb-3">Scénario : Restaurant avec forfait Premium (commission 15%)</h6>
+                                
+                                <div class="row mb-2">
+                                    <div class="col-8">Prix d'une expérience dîner pour deux :</div>
+                                    <div class="col-4 text-end fw-bold">150 $</div>
+                                </div>
+                                
+                                <div class="row mb-2">
+                                    <div class="col-8">Nombre de cartes-cadeaux vendues par mois :</div>
+                                    <div class="col-4 text-end fw-bold">20</div>
+                                </div>
+                                
+                                <div class="row mb-2">
+                                    <div class="col-8">Chiffre d'affaires mensuel via Fimysolutions :</div>
+                                    <div class="col-4 text-end fw-bold">3 000 $</div>
+                                </div>
+                                
+                                <div class="row mb-2">
+                                    <div class="col-8">Commission Fimysolutions (15%) :</div>
+                                    <div class="col-4 text-end fw-bold">450 $</div>
+                                </div>
+                                
+                                <div class="row mb-2">
+                                    <div class="col-8">Abonnement mensuel :</div>
+                                    <div class="col-4 text-end fw-bold">99 $</div>
+                                </div>
+                                
+                                <div class="row pt-2 border-top">
+                                    <div class="col-8 fw-bold">Revenu net pour le restaurant :</div>
+                                    <div class="col-4 text-end fw-bold">2 451 $</div>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-primary">
+                                <i class="fas fa-info-circle me-2"></i> Ce même volume de ventes avec le forfait Élite (commission 10%) générerait un revenu net de 2 701 $ pour le restaurant.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ce que disent nos partenaires</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Depuis que nous avons rejoint Fimysolutions, nous avons vu une augmentation significative de notre clientèle, avec des clients qui valorisent vraiment la qualité de notre offre. Le système de réservation est simple et efficace."</p>
+                            <div class="testimonial-author">
+                                <img src="img/partner-1-placeholder.jpg" alt="Restaurant L'Étoile" class="testimonial-avatar">
+                                <div>
+                                    <h6 class="mb-0">Jean Dupont</h6>
+                                    <small class="text-muted">Restaurant L'Étoile, Montréal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Ce qui nous a séduit chez Fimysolutions, c'est leur approche qui valorise la qualité plutôt que les rabais. Nous avons enfin trouvé une plateforme qui comprend notre positionnement haut de gamme et le respecte."</p>
+                            <div class="testimonial-author">
+                                <img src="img/partner-2-placeholder.jpg" alt="Spa Sérénité" class="testimonial-avatar">
+                                <div>
+                                    <h6 class="mb-0">Marie Lavoie</h6>
+                                    <small class="text-muted">Spa Sérénité, Québec</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Les outils marketing et les analyses fournies par Fimysolutions nous ont permis de mieux comprendre notre clientèle et d'adapter nos offres. Le retour sur investissement a dépassé nos attentes."</p>
+                            <div class="testimonial-author">
+                                <img src="img/partner-3-placeholder.jpg" alt="Hôtel Le Château" class="testimonial-avatar">
+                                <div>
+                                    <h6 class="mb-0">Pierre Tremblay</h6>
+                                    <small class="text-muted">Hôtel Le Château, Mont-Tremblant</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Questions fréquentes</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Comment fonctionne le processus de sélection des partenaires ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Notre processus de sélection comprend une évaluation de votre candidature en ligne, suivie potentiellement d'une visite mystère de votre établissement. Nous évaluons la qualité de vos services, l'expérience client, et l'adéquation avec notre plateforme. Le processus complet prend généralement entre 1 et 3 semaines.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Puis-je changer de forfait après mon inscription ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oui, vous pouvez changer de forfait à tout moment depuis votre tableau de bord partenaire. La mise à niveau vers un forfait supérieur est immédiate, tandis que le passage à un forfait inférieur prendra effet à la fin de votre cycle de facturation en cours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Comment sont gérées les réservations et les paiements ?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Les réservations sont gérées via notre système intégré, avec des notifications en temps réel. Vous pouvez accepter ou refuser les réservations selon votre disponibilité. Les paiements sont collectés par Fimysolutions au moment de l'achat de la carte-cadeau, et vous sont versés deux fois par mois, après déduction de notre commission.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Quelle est la durée d'engagement ?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nos forfaits sont sans engagement de durée. Vous pouvez annuler votre abonnement à tout moment, avec un préavis de 30 jours. Cependant, nous offrons une réduction de 20% pour les engagements annuels payés à l'avance.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Comment puis-je intégrer Fimysolutions à mon système de réservation existant ?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Les forfaits Premium et Élite offrent des options d'intégration avec les systèmes de réservation courants (comme Bookeo, Resy, OpenTable, etc.). Notre équipe technique vous accompagnera dans le processus d'intégration pour assurer une synchronisation fluide des disponibilités et des réservations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Vous avez d'autres questions ?</p>
+                <a href="contact.html" class="btn btn-outline-primary">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Prêt à rejoindre Fimysolutions ?</h2>
+                    <p class="lead mb-4">Devenez partenaire dès aujourd'hui et commencez à offrir vos expériences à une clientèle qualifiée.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="partner-signup.html" class="btn btn-light btn-lg">Devenir partenaire</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="img/logo-white-placeholder.png" alt="Fimysolutions Logo" height="40" class="mb-4">
+                    <p>Fimysolutions transforme l'art d'offrir en créant des moments inoubliables grâce à des cartes-cadeaux personnalisées donnant accès aux meilleures expériences locales.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li class="mb-2"><a href="experiences.html" class="text-white text-decoration-none">Expériences</a></li>
+                        <li class="mb-2"><a href="how-it-works.html" class="text-white text-decoration-none">Comment ça marche</a></li>
+                        <li class="mb-2"><a href="for-businesses.html" class="text-white text-decoration-none">Pour les entreprises</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Partenaires</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="partner-login.html" class="text-white text-decoration-none">Connexion partenaire</a></li>
+                        <li class="mb-2"><a href="partner-signup.html" class="text-white text-decoration-none">Devenir partenaire</a></li>
+                        <li class="mb-2"><a href="partner-resources.html" class="text-white text-decoration-none">Ressources</a></li>
+                        <li class="mb-2"><a href="partner-faq.html" class="text-white text-decoration-none">FAQ partenaires</a></li>
+                        <li class="mb-2"><a href="partner-support.html" class="text-white text-decoration-none">Support partenaire</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Contactez-nous</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Rue Principale, Montréal, QC</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (514) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> partenaires@fimysolutions.com</li>
+                    </ul>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Votre email">
+                            <button class="btn btn-primary" type="button">S'abonner</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0">© 2025 Fimysolutions. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html" class="text-white text-decoration-none me-3">Conditions d'utilisation</a>
+                    <a href="privacy.html" class="text-white text-decoration-none">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

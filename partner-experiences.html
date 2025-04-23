@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fimysolutions - Portail Partenaires</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/partner-portal.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-placeholder.png" alt="Fimysolutions Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner-dashboard.html">Tableau de bord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="partner-experiences.html">Mes expériences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner-reservations.html">Réservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner-analytics.html">Analyses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner-settings.html">Paramètres</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-link dropdown-toggle text-decoration-none" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> FR
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item active" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="en/partner-experiences.html">English</a></li>
+                            <li><a class="dropdown-item" href="es/partner-experiences.html">Español</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-link dropdown-toggle text-decoration-none d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/partner-avatar-placeholder.jpg" alt="Avatar" class="rounded-circle me-2" width="32" height="32">
+                            <span>Restaurant L'Étoile</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="partner-profile.html"><i class="fas fa-user me-2"></i> Mon profil</a></li>
+                            <li><a class="dropdown-item" href="partner-settings.html"><i class="fas fa-cog me-2"></i> Paramètres</a></li>
+                            <li><a class="dropdown-item" href="partner-support.html"><i class="fas fa-question-circle me-2"></i> Support</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i> Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="mb-0">Mes expériences</h1>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addExperienceModal">
+                <i class="fas fa-plus me-2"></i> Ajouter une expérience
+            </button>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" id="experiencesTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab" aria-controls="active" aria-selected="true">
+                    Actives <span class="badge bg-primary ms-2">3</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="draft-tab" data-bs-toggle="tab" data-bs-target="#draft" type="button" role="tab" aria-controls="draft" aria-selected="false">
+                    Brouillons <span class="badge bg-secondary ms-2">2</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="archived-tab" data-bs-toggle="tab" data-bs-target="#archived" type="button" role="tab" aria-controls="archived" aria-selected="false">
+                    Archivées <span class="badge bg-secondary ms-2">1</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="experiencesTabsContent">
+            <!-- Active Experiences -->
+            <div class="tab-pane fade show active" id="active" role="tabpanel" aria-labelledby="active-tab">
+                <div class="row g-4">
+                    <!-- Experience Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-1-placeholder.jpg" class="card-img-top" alt="Dîner gastronomique">
+                                <div class="card-badge">Populaire</div>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Modifier">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Archiver">
+                                        <i class="fas fa-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Gastronomie</span>
+                                    <span class="status text-success"><i class="fas fa-circle me-1"></i> Active</span>
+                                </div>
+                                <h5 class="card-title">Dîner gastronomique pour deux</h5>
+                                <p class="card-text">Une expérience culinaire exceptionnelle avec menu dégustation 5 services et accord mets-vins.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">150 $</span>
+                                    <span class="sales">Vendues: 24</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-bar me-1"></i> Statistiques
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-2-placeholder.jpg" class="card-img-top" alt="Brunch du dimanche">
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Modifier">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Archiver">
+                                        <i class="fas fa-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Gastronomie</span>
+                                    <span class="status text-success"><i class="fas fa-circle me-1"></i> Active</span>
+                                </div>
+                                <h5 class="card-title">Brunch du dimanche pour deux</h5>
+                                <p class="card-text">Un brunch gourmand avec produits locaux, viennoiseries maison et boissons chaudes à volonté.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">75 $</span>
+                                    <span class="sales">Vendues: 18</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-bar me-1"></i> Statistiques
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-3-placeholder.jpg" class="card-img-top" alt="Atelier de dégustation">
+                                <div class="card-badge">Nouveau</div>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Modifier">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Archiver">
+                                        <i class="fas fa-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Atelier</span>
+                                    <span class="status text-success"><i class="fas fa-circle me-1"></i> Active</span>
+                                </div>
+                                <h5 class="card-title">Atelier de dégustation de vins</h5>
+                                <p class="card-text">Découverte de 6 vins d'exception accompagnés de bouchées gastronomiques, guidée par notre sommelier.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">95 $</span>
+                                    <span class="sales">Vendues: 7</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-bar me-1"></i> Statistiques
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draft Experiences -->
+            <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draft-tab">
+                <div class="row g-4">
+                    <!-- Draft Experience 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-4-placeholder.jpg" class="card-img-top" alt="Dîner en terrasse">
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Modifier">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Supprimer">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Gastronomie</span>
+                                    <span class="status text-secondary"><i class="fas fa-circle me-1"></i> Brouillon</span>
+                                </div>
+                                <h5 class="card-title">Dîner en terrasse avec vue</h5>
+                                <p class="card-text">Une soirée romantique sur notre terrasse panoramique avec menu 3 services et cocktail de bienvenue.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">120 $</span>
+                                    <span class="completion">Complété à 80%</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-sm w-100">
+                                            <i class="fas fa-check me-1"></i> Publier
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Draft Experience 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-5-placeholder.jpg" class="card-img-top" alt="Cours de cuisine">
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Modifier">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Supprimer">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Atelier</span>
+                                    <span class="status text-secondary"><i class="fas fa-circle me-1"></i> Brouillon</span>
+                                </div>
+                                <h5 class="card-title">Cours de cuisine avec le chef</h5>
+                                <p class="card-text">Apprenez à préparer un menu gastronomique complet avec notre chef étoilé, suivi d'un repas convivial.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">180 $</span>
+                                    <span class="completion">Complété à 50%</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-sm w-100">
+                                            <i class="fas fa-check me-1"></i> Publier
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Archived Experiences -->
+            <div class="tab-pane fade" id="archived" role="tabpanel" aria-labelledby="archived-tab">
+                <div class="row g-4">
+                    <!-- Archived Experience -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card experience-card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="img/experience-6-placeholder.jpg" class="card-img-top" alt="Menu d'été">
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Restaurer">
+                                        <i class="fas fa-undo"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-light rounded-circle" title="Supprimer">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="category">Gastronomie</span>
+                                    <span class="status text-muted"><i class="fas fa-circle me-1"></i> Archivée</span>
+                                </div>
+                                <h5 class="card-title">Menu d'été en terrasse</h5>
+                                <p class="card-text">Menu saisonnier mettant en valeur les produits frais du marché, servi sur notre terrasse fleurie.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="price">85 $</span>
+                                    <span class="sales">Vendues: 32</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-top-0">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-eye me-1"></i> Aperçu
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-outline-success btn-sm w-100">
+                                            <i class="fas fa-redo me-1"></i> Réactiver
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Experience Modal -->
+    <div class="modal fade" id="addExperienceModal" tabindex="-1" aria-labelledby="addExperienceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addExperienceModalLabel">Ajouter une nouvelle expérience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="experienceForm">
+                        <!-- Basic Information -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Informations de base</h6>
+                            <div class="mb-3">
+                                <label for="experienceTitle" class="form-label">Titre de l'expérience*</label>
+                                <input type="text" class="form-control" id="experienceTitle" required>
+                                <div class="form-text">Choisissez un titre accrocheur qui décrit clairement votre expérience (max. 60 caractères)</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceCategory" class="form-label">Catégorie*</label>
+                                <select class="form-select" id="experienceCategory" required>
+                                    <option value="" selected disabled>Sélectionnez une catégorie</option>
+                                    <option value="gastronomy">Gastronomie</option>
+                                    <option value="wellness">Bien-être</option>
+                                    <option value="stay">Séjour</option>
+                                    <option value="activity">Activité</option>
+                                    <option value="workshop">Atelier</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceDescription" class="form-label">Description*</label>
+                                <textarea class="form-control" id="experienceDescription" rows="4" required></textarea>
+                                <div class="form-text">Décrivez en détail ce que comprend votre expérience (max. 500 caractères)</div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Tarification</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="experiencePrice" class="form-label">Prix par personne/unité*</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="experiencePrice" min="0" step="0.01" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="experienceCapacity" class="form-label">Capacité/Disponibilité*</label>
+                                    <input type="number" class="form-control" id="experienceCapacity" min="1" required>
+                                    <div class="form-text">Nombre de personnes ou d'unités disponibles par jour</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceDuration" class="form-label">Durée de l'expérience*</label>
+                                <select class="form-select" id="experienceDuration" required>
+                                    <option value="" selected disabled>Sélectionnez une durée</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="60">1 heure</option>
+                                    <option value="90">1 heure 30</option>
+                                    <option value="120">2 heures</option>
+                                    <option value="180">3 heures</option>
+                                    <option value="240">4 heures</option>
+                                    <option value="day">Journée complète</option>
+                                    <option value="evening">Soirée</option>
+                                    <option value="custom">Personnalisée</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Availability -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Disponibilité</h6>
+                            <div class="mb-3">
+                                <label class="form-label">Jours disponibles*</label>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="monday" id="monday">
+                                        <label class="form-check-label" for="monday">Lundi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="tuesday" id="tuesday">
+                                        <label class="form-check-label" for="tuesday">Mardi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="wednesday" id="wednesday">
+                                        <label class="form-check-label" for="wednesday">Mercredi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="thursday" id="thursday">
+                                        <label class="form-check-label" for="thursday">Jeudi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="friday" id="friday">
+                                        <label class="form-check-label" for="friday">Vendredi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="saturday" id="saturday">
+                                        <label class="form-check-label" for="saturday">Samedi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="sunday" id="sunday">
+                                        <label class="form-check-label" for="sunday">Dimanche</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="startTime" class="form-label">Heure de début</label>
+                                    <input type="time" class="form-control" id="startTime">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="endTime" class="form-label">Heure de fin</label>
+                                    <input type="time" class="form-control" id="endTime">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="availabilityNotes" class="form-label">Notes sur la disponibilité</label>
+                                <textarea class="form-control" id="availabilityNotes" rows="2"></textarea>
+                                <div class="form-text">Ex: "Fermé les jours fériés", "Réservation 48h à l'avance requise"</div>
+                            </div>
+                        </div>
+
+                        <!-- Media -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Médias</h6>
+                            <div class="mb-3">
+                                <label for="experienceImages" class="form-label">Images de l'expérience*</label>
+                                <input class="form-control" type="file" id="experienceImages" multiple accept="image/*">
+                                <div class="form-text">Ajoutez au moins 3 images de haute qualité (format recommandé: 1200x800px)</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceVideo" class="form-label">Vidéo (optionnel)</label>
+                                <input class="form-control" type="file" id="experienceVideo" accept="video/*">
+                                <div class="form-text">Ajoutez une courte vidéo présentant votre expérience (max. 30 secondes)</div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Details -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Détails supplémentaires</h6>
+                            <div class="mb-3">
+                                <label for="experienceIncludes" class="form-label">Ce qui est inclus*</label>
+                                <textarea class="form-control" id="experienceIncludes" rows="3" required></textarea>
+                                <div class="form-text">Listez tout ce qui est inclus dans l'expérience</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceExcludes" class="form-label">Ce qui n'est pas inclus</label>
+                                <textarea class="form-control" id="experienceExcludes" rows="2"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceRequirements" class="form-label">Prérequis ou restrictions</label>
+                                <textarea class="form-control" id="experienceRequirements" rows="2"></textarea>
+                                <div class="form-text">Ex: "Âge minimum", "Tenue appropriée requise", "Non adapté aux personnes à mobilité réduite"</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="experienceCancellation" class="form-label">Politique d'annulation*</label>
+                                <select class="form-select" id="experienceCancellation" required>
+                                    <option value="" selected disabled>Sélectionnez une politique</option>
+                                    <option value="flexible">Flexible (annulation gratuite jusqu'à 24h avant)</option>
+                                    <option value="moderate">Modérée (annulation gratuite jusqu'à 3 jours avant)</option>
+                                    <option value="strict">Stricte (annulation gratuite jusqu'à 7 jours avant)</option>
+                                    <option value="custom">Personnalisée</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Commission Settings -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Paramètres de commission</h6>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Selon votre forfait actuel (Premium), le taux de commission standard est de 15%.
+                            </div>
+                            <div class="mb-3">
+                                <label for="commissionType" class="form-label">Type de commission</label>
+                                <select class="form-select" id="commissionType">
+                                    <option value="standard" selected>Commission standard (15%)</option>
+                                    <option value="negotiated">Commission négociée</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 d-none" id="negotiatedCommissionField">
+                                <label for="negotiatedCommission" class="form-label">Taux de commission négocié</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="negotiatedCommission" min="10" max="20" step="0.5" value="15">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                                <div class="form-text">Le taux négocié doit être entre 10% et 20%</div>
+                            </div>
+                        </div>
+
+                        <!-- Publication Settings -->
+                        <div class="mb-4">
+                            <h6 class="form-section-title">Paramètres de publication</h6>
+                            <div class="mb-3">
+                                <label for="publicationStatus" class="form-label">Statut de publication</label>
+                                <select class="form-select" id="publicationStatus">
+                                    <option value="draft" selected>Enregistrer comme brouillon</option>
+                                    <option value="publish">Publier immédiatement</option>
+                                    <option value="schedule">Programmer la publication</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 d-none" id="scheduledPublicationField">
+                                <label for="scheduledDate" class="form-label">Date de publication programmée</label>
+                                <input type="datetime-local" class="form-control" id="scheduledDate">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="saveExperience">Enregistrer l'expérience</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0">© 2025 Fimysolutions. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="partner-support.html" class="text-white text-decoration-none me-3">Support partenaire</a>
+                    <a href="partner-resources.html" class="text-white text-decoration-none me-3">Ressources</a>
+                    <a href="terms.html" class="text-white text-decoration-none">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/partner-portal.js"></script>
+</body>
+</html>

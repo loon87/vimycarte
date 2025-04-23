@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnalisation de Cartes-Cadeaux - Fimysolutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/business-portal.css">
+    <link rel="stylesheet" href="css/card-customization.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Fimysolutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Expériences</a></li>
+                    <li><a href="business-portal.html">Pour les entreprises</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="card-customization.html" class="active">FR</a>
+                <a href="en/card-customization.html">EN</a>
+                <a href="es/card-customization.html">ES</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="dashboard-header">
+                <h1>Tableau de bord entreprise</h1>
+                <div class="user-info">
+                    <span class="user-name">Restaurant La Belle Époque</span>
+                    <span class="user-plan">Forfait Professionnel</span>
+                </div>
+            </section>
+
+            <div class="dashboard-navigation">
+                <ul>
+                    <li><a href="#">Tableau de bord</a></li>
+                    <li><a href="#" class="active">Cartes-cadeaux</a></li>
+                    <li><a href="#">Réservations</a></li>
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </div>
+
+            <section class="card-customization-section">
+                <div class="section-header">
+                    <h2>Personnalisation de cartes-cadeaux</h2>
+                    <button class="btn btn-primary" id="save-card">Enregistrer</button>
+                </div>
+
+                <div class="customization-container">
+                    <div class="customization-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Informations de base</h3>
+                            <div class="form-group">
+                                <label for="card-title">Titre de l'expérience</label>
+                                <input type="text" id="card-title" value="Dîner Gastronomique pour Deux">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-category">Catégorie</label>
+                                <select id="card-category">
+                                    <option value="restaurant" selected>Restaurant</option>
+                                    <option value="hotel">Hôtel</option>
+                                    <option value="spa">Spa & Bien-être</option>
+                                    <option value="activity">Activité</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-price">Prix ($ CA)</label>
+                                <input type="number" id="card-price" value="270">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-validity">Validité (jours)</label>
+                                <input type="number" id="card-validity" value="365">
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Description</h3>
+                            <div class="form-group">
+                                <label for="card-description">Description courte</label>
+                                <textarea id="card-description" rows="3">Menu dégustation en 5 services avec accord mets et vins dans notre restaurant étoilé.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-details">Détails de l'expérience</label>
+                                <textarea id="card-details" rows="6">Profitez d'un menu dégustation en 5 services préparé par notre chef étoilé, accompagné d'une sélection de vins soigneusement choisis par notre sommelier. L'expérience inclut un apéritif de bienvenue, 5 plats gastronomiques et les accords vins.</textarea>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Images</h3>
+                            <div class="form-group">
+                                <label for="card-main-image">Image principale</label>
+                                <div class="image-upload-container">
+                                    <div class="image-preview" id="main-image-preview">
+                                        <img src="images/fine_dining_plate.jpeg" alt="Image principale">
+                                    </div>
+                                    <button class="btn btn-outline btn-small">Changer l'image</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Images supplémentaires</label>
+                                <div class="additional-images">
+                                    <div class="image-upload-container small">
+                                        <div class="image-preview">
+                                            <img src="images/fine_dining_table.jpeg" alt="Image supplémentaire">
+                                        </div>
+                                        <button class="btn btn-outline btn-small">Changer</button>
+                                    </div>
+                                    <div class="image-upload-container small">
+                                        <div class="image-preview empty">
+                                            <span class="add-icon">+</span>
+                                        </div>
+                                        <button class="btn btn-outline btn-small">Ajouter</button>
+                                    </div>
+                                    <div class="image-upload-container small">
+                                        <div class="image-preview empty">
+                                            <span class="add-icon">+</span>
+                                        </div>
+                                        <button class="btn btn-outline btn-small">Ajouter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Conditions</h3>
+                            <div class="form-group">
+                                <label for="card-terms">Conditions d'utilisation</label>
+                                <textarea id="card-terms" rows="4">Réservation obligatoire. Valable tous les jours sauf jours fériés. Non cumulable avec d'autres offres. Boissons supplémentaires non incluses.</textarea>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Disponibilité</h3>
+                            <div class="form-group">
+                                <label for="card-availability">Disponibilité</label>
+                                <select id="card-availability">
+                                    <option value="always" selected>Toujours disponible</option>
+                                    <option value="limited">Disponibilité limitée</option>
+                                    <option value="custom">Dates personnalisées</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-quantity">Quantité disponible</label>
+                                <input type="number" id="card-quantity" value="50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-preview-container">
+                        <h3>Aperçu de la carte-cadeau</h3>
+                        <div class="preview-tabs">
+                            <button class="preview-tab active" data-view="customer">Vue client</button>
+                            <button class="preview-tab" data-view="recipient">Vue destinataire</button>
+                        </div>
+
+                        <div class="card-preview">
+                            <div class="gift-card">
+                                <div class="gift-card-header">
+                                    <div class="gift-card-logo">Fimysolutions</div>
+                                    <div class="gift-card-price">270 $ CA</div>
+                                </div>
+                                <div class="gift-card-image">
+                                    <img src="images/fine_dining_plate.jpeg" alt="Dîner Gastronomique">
+                                </div>
+                                <div class="gift-card-content">
+                                    <h3 class="gift-card-title">Dîner Gastronomique pour Deux</h3>
+                                    <p class="gift-card-description">Menu dégustation en 5 services avec accord mets et vins dans notre restaurant étoilé.</p>
+                                    <div class="gift-card-details">
+                                        <div class="gift-card-detail">
+                                            <span class="detail-icon">🍽️</span>
+                                            <span class="detail-text">Restaurant La Belle Époque</span>
+                                        </div>
+                                        <div class="gift-card-detail">
+                                            <span class="detail-icon">📍</span>
+                                            <span class="detail-text">Montréal, QC</span>
+                                        </div>
+                                        <div class="gift-card-detail">
+                                            <span class="detail-icon">⏱️</span>
+                                            <span class="detail-text">Valable 1 an</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gift-card-footer">
+                                    <div class="gift-card-code">DEMO-1234-5678</div>
+                                </div>
+                            </div>
+
+                            <div class="personalization-options">
+                                <h4>Options de personnalisation pour le client</h4>
+                                <div class="personalization-option">
+                                    <label>
+                                        <input type="checkbox" checked> Permettre l'ajout d'un message personnel
+                                    </label>
+                                </div>
+                                <div class="personalization-option">
+                                    <label>
+                                        <input type="checkbox" checked> Permettre l'ajout d'une photo
+                                    </label>
+                                </div>
+                                <div class="personalization-option">
+                                    <label>
+                                        <input type="checkbox" checked> Permettre l'ajout d'une vidéo
+                                    </label>
+                                </div>
+                                <div class="personalization-option">
+                                    <label>
+                                        <input type="checkbox" checked> Permettre le choix de la date
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-actions">
+                            <button class="btn btn-outline">Aperçu en plein écran</button>
+                            <button class="btn btn-outline">Tester l'expérience client</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="existing-cards">
+                <h3>Vos cartes-cadeaux existantes</h3>
+                <div class="cards-grid">
+                    <div class="card-item">
+                        <div class="card-item-image">
+                            <img src="images/fine_dining_plate.jpeg" alt="Dîner Gastronomique">
+                        </div>
+                        <div class="card-item-content">
+                            <h4>Dîner Gastronomique pour Deux</h4>
+                            <p>270 $ CA</p>
+                            <div class="card-item-status active">Active</div>
+                            <div class="card-item-stats">
+                                <span>Vendues: 12</span>
+                                <span>Vues: 145</span>
+                            </div>
+                        </div>
+                        <div class="card-item-actions">
+                            <button class="btn btn-small">Modifier</button>
+                            <button class="btn btn-small btn-outline">Dupliquer</button>
+                        </div>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-item-image">
+                            <img src="images/fine_dining_table.jpeg" alt="Menu Découverte">
+                        </div>
+                        <div class="card-item-content">
+                            <h4>Menu Découverte avec Champagne</h4>
+                            <p>180 $ CA</p>
+                            <div class="card-item-status active">Active</div>
+                            <div class="card-item-stats">
+                                <span>Vendues: 8</span>
+                                <span>Vues: 92</span>
+                            </div>
+                        </div>
+                        <div class="card-item-actions">
+                            <button class="btn btn-small">Modifier</button>
+                            <button class="btn btn-small btn-outline">Dupliquer</button>
+                        </div>
+                    </div>
+
+                    <div class="card-item add-new">
+                        <div class="add-new-content">
+                            <span class="add-icon">+</span>
+                            <p>Créer une nouvelle carte-cadeau</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fimysolutions</h3>
+                    <p>La plateforme de cartes-cadeaux pour des expériences locales authentiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="business-portal.html">Pour les entreprises</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@fimysolutions.com</p>
+                    <p>Téléphone: +1 800-555-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fimysolutions. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/card-customization.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche d'expériences - Fimysolutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Fimysolutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="search.html" class="active">Recherche</a></li>
+                    <li><a href="business-portal.html">Pour les entreprises</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="search.html" class="active">FR</a>
+                <a href="en/search.html">EN</a>
+                <a href="es/search.html">ES</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-hero">
+                <div class="search-hero-content">
+                    <h1>Trouvez l'expérience parfaite</h1>
+                    <p>Découvrez des cartes-cadeaux uniques pour des expériences inoubliables</p>
+                </div>
+            </section>
+
+            <section class="search-container">
+                <div class="search-filters">
+                    <h2>Filtres</h2>
+                    
+                    <div class="filter-group">
+                        <h3>Catégories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="accommodation" checked>
+                                <span class="checkmark"></span>
+                                Hébergement
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="dining" checked>
+                                <span class="checkmark"></span>
+                                Restauration
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="spa" checked>
+                                <span class="checkmark"></span>
+                                Spa & Bien-être
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="activities" checked>
+                                <span class="checkmark"></span>
+                                Activités & Loisirs
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="packages" checked>
+                                <span class="checkmark"></span>
+                                Forfaits combinés
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Localisation</h3>
+                        <div class="filter-search">
+                            <input type="text" id="location-search" placeholder="Ville ou code postal">
+                            <button id="location-search-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="popular-locations">
+                            <span class="location-tag" data-location="Montréal">Montréal</span>
+                            <span class="location-tag" data-location="Québec">Québec</span>
+                            <span class="location-tag" data-location="Beauport">Beauport</span>
+                            <span class="location-tag" data-location="Laval">Laval</span>
+                            <span class="location-tag" data-location="Gatineau">Gatineau</span>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Prix</h3>
+                        <div class="price-range">
+                            <div class="range-slider">
+                                <input type="range" id="price-min" min="0" max="1000" value="0" step="10">
+                                <input type="range" id="price-max" min="0" max="1000" value="1000" step="10">
+                                <div class="range-slider-track"></div>
+                                <div class="range-slider-progress"></div>
+                            </div>
+                            <div class="range-values">
+                                <span id="price-min-value">0 $ CA</span>
+                                <span id="price-max-value">1000 $ CA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Évaluation</h3>
+                        <div class="rating-filter">
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="any" checked>
+                                <span class="radio-mark"></span>
+                                Toutes les évaluations
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="4plus">
+                                <span class="radio-mark"></span>
+                                4★ et plus
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="3plus">
+                                <span class="radio-mark"></span>
+                                3★ et plus
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button id="reset-filters" class="btn btn-outline">Réinitialiser les filtres</button>
+                </div>
+                
+                <div class="search-results">
+                    <div class="search-header">
+                        <div class="search-summary">
+                            <h2>Résultats de recherche</h2>
+                            <p id="results-count">12 expériences trouvées</p>
+                        </div>
+                        <div class="search-sort">
+                            <label for="sort-by">Trier par:</label>
+                            <select id="sort-by">
+                                <option value="relevance">Pertinence</option>
+                                <option value="price-asc">Prix (croissant)</option>
+                                <option value="price-desc">Prix (décroissant)</option>
+                                <option value="rating">Évaluation</option>
+                                <option value="newest">Plus récent</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="results-grid" id="results-grid">
+                        <!-- Les résultats seront ajoutés ici dynamiquement -->
+                    </div>
+                    
+                    <div class="empty-results" id="empty-results" style="display: none;">
+                        <div class="empty-icon">🔍</div>
+                        <h3>Aucun résultat trouvé</h3>
+                        <p>Essayez de modifier vos filtres ou d'élargir votre recherche.</p>
+                    </div>
+                    
+                    <div class="pagination" id="pagination">
+                        <button class="pagination-prev" disabled>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                            Précédent
+                        </button>
+                        <div class="pagination-pages">
+                            <span class="pagination-current">1</span> sur <span class="pagination-total">1</span>
+                        </div>
+                        <button class="pagination-next" disabled>
+                            Suivant
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fimysolutions</h3>
+                    <p>La plateforme de cartes-cadeaux pour des expériences locales authentiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="business-portal.html">Pour les entreprises</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@fimysolutions.com</p>
+                    <p>Téléphone: +1 800-555-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fimysolutions. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal de détail d'expérience -->
+    <div class="modal" id="experience-detail-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Détail de l'expérience</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="experience-detail">
+                    <div class="experience-images">
+                        <div class="main-image">
+                            <img id="modal-main-image" src="" alt="Image principale">
+                        </div>
+                        <div class="thumbnail-images" id="modal-thumbnails">
+                            <!-- Les miniatures seront ajoutées ici dynamiquement -->
+                        </div>
+                    </div>
+                    <div class="experience-info">
+                        <div class="experience-header">
+                            <div>
+                                <h2 id="modal-experience-title">Titre de l'expérience</h2>
+                                <div class="experience-location" id="modal-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                    </svg>
+                                    <span>Localisation</span>
+                                </div>
+                                <div class="experience-rating" id="modal-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-count">(42 avis)</span>
+                                </div>
+                            </div>
+                            <div class="experience-price" id="modal-price">0 $ CA</div>
+                        </div>
+                        
+                        <div class="experience-description" id="modal-description">
+                            Description de l'expérience
+                        </div>
+                        
+                        <div class="experience-details">
+                            <div class="detail-section">
+                                <h4>Ce qui est inclus</h4>
+                                <ul id="modal-includes">
+                                    <!-- Les inclusions seront ajoutées ici dynamiquement -->
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4>Conditions</h4>
+                                <ul id="modal-terms">
+                                    <!-- Les conditions seront ajoutées ici dynamiquement -->
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4>À propos du partenaire</h4>
+                                <div class="partner-info" id="modal-partner">
+                                    <div class="partner-logo">
+                                        <img id="modal-partner-logo" src="" alt="Logo du partenaire">
+                                    </div>
+                                    <div class="partner-details">
+                                        <h5 id="modal-partner-name">Nom du partenaire</h5>
+                                        <p id="modal-partner-description">Description du partenaire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-actions">
+                            <button class="btn btn-primary" id="modal-buy-button">Acheter cette carte-cadeau</button>
+                            <button class="btn btn-outline" id="modal-save-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                </svg>
+                                Sauvegarder
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

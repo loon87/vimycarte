@@ -1,0 +1,494 @@
+/* Payment Processing Styles */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment Process Container */
+.payment-process-container {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+/* Payment Steps */
+.payment-steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    background-color: var(--light-color);
+    border-bottom: 1px solid #eee;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.step.active:not(:last-child):after {
+    background-color: var(--primary-color);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.step.active .step-number {
+    background-color: var(--primary-color);
+}
+
+.step.completed .step-number {
+    background-color: var(--success-color);
+}
+
+.step-label {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.step.active .step-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.step.completed .step-label {
+    color: var(--success-color);
+}
+
+/* Payment Content */
+.payment-content {
+    padding: 30px;
+}
+
+.payment-step-content {
+    display: none;
+}
+
+.payment-step-content.active {
+    display: block;
+}
+
+.payment-step-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.step-description {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+/* Plan Cards */
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.plan-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.selected {
+    border: 2px solid var(--primary-color);
+}
+
+.plan-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.plan-header h3 {
+    margin: 0 0 10px;
+}
+
+.plan-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.plan-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.commission-rate {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.plan-features {
+    padding: 20px;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-features li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plan-features li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+}
+
+.plan-footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+/* Payment Summary */
+.payment-summary {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.payment-summary h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item.total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/* Payment Form */
+.payment-form-container {
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Payment Methods */
+.payment-methods {
+    margin-top: 20px;
+}
+
+.payment-method-selector {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-method-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method-option input[type="radio"] {
+    margin-right: 8px;
+}
+
+.method-label {
+    font-weight: 500;
+}
+
+.credit-card-form,
+.paypal-form {
+    display: none;
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+}
+
+.credit-card-form.active,
+.paypal-form.active {
+    display: block;
+}
+
+.card-input-container {
+    position: relative;
+}
+
+.card-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.card-icon {
+    width: 30px;
+    height: 20px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-icon.visa {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgMzYzIj48cGF0aCBmaWxsPSIjMDAyNzlBIiBkPSJNNTc2IDI4MS4zYzAgNDUuMS0zNi43IDgxLjctODEuOSA4MS43SDgxLjljLTQ1LjIgMC04MS45LTM2LjYtODEuOS04MS43VjgxLjdDMCAzNi42IDM2LjcgMCA4MS45IDBINTA0YzQ1LjIgMCA4MS45IDM2LjYgODEuOSA4MS43djE5OS42aC4xeiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0yMDMuNSAxNDBjMC0yOC4xLTM2LjMtMjQuOC00Ny45LTIyLjlsNS43LTI2LjZoMjguMWwtNC4yIDE5LjZoMjguOWwtNS43IDMwLjNjLTguNSAwLTIxLjYtLjgtMjguOS0uOC0yMi40IDAtMzQuNyA2LjYtMzQuNyAyMC40IDAgMTguOCAyNC44IDE5LjYgNDAuNCAzMi43IDE1LjUgMTMuMSAxOC44IDI0LjEgMTUuNSAzNi4zLTUgMTguOC0xOS42IDQwLjQtNjkuMyA0MC40LTEyLjMgMC0yNy0yLjMtMzUuNS0yLjNsNi4yLTMwLjNjOC4xIDIuMyAyMC40IDQuNiAzMi43IDQuNiAxMy45IDAgMzEuOS0zLjUgMzUuNS0yMC40IDMuMS0xMy45LTEwLjQtMTkuNi0yNi42LTMxLjEtMTQuNy0xMC40LTI4LjktMjIuNC0yMy4zLTQ0LjggNS4zLTI0LjEgMjkuMy0zNi4zIDYxLjItMzYuMyAxMC40IDAgMjYuNiAxLjkgMzQuNyAxLjlsLTYuMiAyOS42Yy01LjgtLjgtMTguOC0xLjktMjYuNi0xLjktMTguNy0uMS0yNi42IDUuNy0yNi42IDE2LjVtODkuNyA5MS43bDIwLjQtMTI2LjRoMzQuN2wtMjAuNSAxMjYuNGgtMzQuNnptNjEuMiAwbDMwLjMtMTI2LjRoMzIuN2wtMy4xIDE5LjZjMTAuNC0xNC43IDI0LjEtMjIuNCA0MC40LTIyLjQgMjAuNCAwIDMyLjcgMTEuNiAyOC45IDM0LjdsLTE3LjMgOTQuNWgtMzQuN2wxNS41LTg1LjZjMS45LTEwLjQtMi4zLTE1LjUtMTEuNi0xNS41cy0xOS42IDUtMjUuOCAxOC44bC0xNS41IDgyLjVoLTM5Ljh6bTE4OC4zLTkxLjdjMC0yOC4xLTM2LjMtMjQuOC00Ny45LTIyLjlsNS43LTI2LjZoMjguMWwtNC4yIDE5LjZoMjguOWwtNS43IDMwLjNjLTguNSAwLTIxLjYtLjgtMjguOS0uOC0yMi40IDAtMzQuNyA2LjYtMzQuNyAyMC40IDAgMTguOCAyNC44IDE5LjYgNDAuNCAzMi43IDE1LjUgMTMuMSAxOC44IDI0LjEgMTUuNSAzNi4zLTUgMTguOC0xOS42IDQwLjQtNjkuMyA0MC40LTEyLjMgMC0yNy0yLjMtMzUuNS0yLjNsNi4yLTMwLjNjOC4xIDIuMyAyMC40IDQuNiAzMi43IDQuNiAxMy45IDAgMzEuOS0zLjUgMzUuNS0yMC40IDMuMS0xMy45LTEwLjQtMTkuNi0yNi42LTMxLjEtMTQuNy0xMC40LTI4LjktMjIuNC0yMy4zLTQ0LjggNS4zLTI0LjEgMjkuMy0zNi4zIDYxLjItMzYuMyAxMC40IDAgMjYuNiAxLjkgMzQuNyAxLjlsLTYuMiAyOS42Yy01LjgtLjgtMTguOC0xLjktMjYuNi0xLjktMTguNyAwLTI2LjYgNS44LTI2LjYgMTYuNiIvPjwvc3ZnPg==');
+}
+
+.card-icon.mastercard {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDQgMzI0Ij48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNTQgMzI0YzMwIDAgNTQtMjQgNTQtNTRWNTRjMC0zMC0yNC01NC01NC01NEg1NEMyNCAwIDAgMjQgMCA1NHYyMTZjMCAzMCAyNCA1NCA1NCA1NGg0NTB6Ii8+PHBhdGggZmlsbD0iI0ZGNTAwMCIgZD0iTTI1MiAxMDhjMzMgMCA2MCAxNCA4MCAzNmgtMTYwYzIwLTIyIDQ3LTM2IDgwLTM2eiIvPjxwYXRoIGZpbGw9IiNFQjAwMUIiIGQ9Ik0yNTIgMjE2YzMzIDAgNjAtMTQgODAtMzZoLTE2MGMyMCAyMiA0NyAzNiA4MCAzNnoiLz48cGF0aCBmaWxsPSIjRjc5RTFCIiBkPSJNMzMyIDE0NGMwIDExLTIgMjItNiAzMmgxNDhjLTMtMTAtNS0yMS01LTMyIDAtMTEgMi0yMiA1LTMyaC0xNDhjNC0xMCA2LTIxIDYtMzJ6Ii8+PHBhdGggZmlsbD0iI0ZGNTAwMCIgZD0iTTE3MiAxNDRjMC0xMSAyLTIyIDYtMzJIMzBjLTMgMTAtNSAyMS01IDMyIDAgMTEgMiAyMiA1IDMyaDE0OGMtNC0xMC02LTIxLTYtMzJ6Ii8+PC9zdmc+');
+}
+
+.card-icon.amex {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgMzYzIj48cGF0aCBmaWxsPSIjMDA3OUM2IiBkPSJNNTc2IDI4MS4zYzAgNDUuMS0zNi43IDgxLjctODEuOSA4MS43SDgxLjljLTQ1LjIgMC04MS45LTM2LjYtODEuOS04MS43VjgxLjdDMCAzNi42IDM2LjcgMCA4MS45IDBINTA0YzQ1LjIgMCA4MS45IDM2LjYgODEuOSA4MS43djE5OS42aC4xeiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0yNDkuNiAxODEuNWwtNDcuOS02Ni4yaC01OC4xdjEzMi40aDU3LjVWMTgxLjVsNDcuOSA2Ni4yaDE1LjVWMTE1LjNoLTU3LjV2NjYuMmgyLjZ6bS0xMzguNSA2Ni4yaDYwLjdsMTMuOS0zMy45aDMxLjFsMTMuOSAzMy45aDYwLjdMMjE4LjUgMTE1LjNoLTQ0LjFsLTYzLjMgMTMyLjR6bTkxLjgtNTcuNWgtMTcuM2w4LjUtMjAuNCA4LjggMjAuNHptMTM4LjUgNTcuNWg3Ny41di0yOC4xaC00Ni40di0yNC4xaDQ1LjZ2LTI4LjFoLTQ1LjZ2LTIzLjNoNDYuNHYtMjguOWgtNzcuNXYxMzIuNXptOTEuOCAwaDMwLjNsMzguNi00MC40IDM4LjYgNDAuNGgzMC4zbC01My4zLTU1LjYgNDguNy01MC4zSDQ5OGwtMzQuNyAzNi4zbC0zNC43LTM2LjNoLTMzLjlsNDguNyA1MC4zLTUzLjMgNTUuNmguMXoiLz48L3N2Zz4=');
+}
+
+.paypal-info {
+    text-align: center;
+    padding: 20px;
+    color: var(--secondary-color);
+}
+
+/* Terms Checkbox */
+.terms-checkbox {
+    margin-top: 20px;
+}
+
+.terms-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* Payment Security Info */
+.payment-security-info {
+    display: flex;
+    align-items: center;
+    background-color: rgba(40, 167, 69, 0.1);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+.security-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.payment-security-info p {
+    margin: 0;
+    color: var(--success-color);
+    font-size: 0.9rem;
+}
+
+/* Confirmation Step */
+.confirmation-message {
+    text-align: center;
+    padding: 30px;
+}
+
+.confirmation-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--success-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 20px;
+}
+
+.confirmation-details {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.confirmation-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.confirmation-item:last-child {
+    border-bottom: none;
+}
+
+.next-steps {
+    text-align: left;
+    margin: 30px 0;
+}
+
+.next-steps h3 {
+    margin-bottom: 15px;
+}
+
+.next-steps ul {
+    padding-left: 20px;
+}
+
+.next-steps li {
+    margin-bottom: 10px;
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Payment Navigation */
+.payment-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: var(--light-color);
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .payment-steps {
+        padding: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plan-card {
+        max-width: 100%;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+    }
+}

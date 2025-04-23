@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement des Paiements - Fimysolutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/business-portal.css">
+    <link rel="stylesheet" href="css/payment-processing.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Fimysolutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Expériences</a></li>
+                    <li><a href="business-portal.html">Pour les entreprises</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="payment-processing.html" class="active">FR</a>
+                <a href="en/payment-processing.html">EN</a>
+                <a href="es/payment-processing.html">ES</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="dashboard-header">
+                <h1>Paiement de l'abonnement</h1>
+                <div class="user-info">
+                    <span class="user-name">Restaurant La Belle Époque</span>
+                </div>
+            </section>
+
+            <div class="payment-process-container">
+                <div class="payment-steps">
+                    <div class="step active" data-step="plan">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Forfait</div>
+                    </div>
+                    <div class="step" data-step="payment">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Paiement</div>
+                    </div>
+                    <div class="step" data-step="confirmation">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+
+                <div class="payment-content">
+                    <!-- Étape 1: Sélection du forfait -->
+                    <div class="payment-step-content active" id="plan-step">
+                        <h2>Choisissez votre forfait</h2>
+                        <p class="step-description">Sélectionnez le forfait qui correspond le mieux à vos besoins. Vous pouvez changer de forfait à tout moment.</p>
+                        
+                        <div class="plans-container">
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Forfait Essentiel</h3>
+                                    <div class="plan-price">39,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 20%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Jusqu'à 5 cartes-cadeaux actives</li>
+                                        <li>Personnalisation de base</li>
+                                        <li>Rapports mensuels</li>
+                                        <li>Support par email</li>
+                                        <li>Visibilité standard</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn btn-outline select-plan" data-plan="essential" data-price="39.99" data-commission="20">Sélectionner</button>
+                                </div>
+                            </div>
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Forfait Professionnel</h3>
+                                    <div class="plan-price">79,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 15%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Jusqu'à 15 cartes-cadeaux actives</li>
+                                        <li>Personnalisation avancée</li>
+                                        <li>Rapports détaillés</li>
+                                        <li>Support prioritaire</li>
+                                        <li>Visibilité améliorée</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn select-plan" data-plan="professional" data-price="79.99" data-commission="15">Sélectionner</button>
+                                </div>
+                            </div>
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Forfait Premium</h3>
+                                    <div class="plan-price">149,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 10%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Cartes-cadeaux illimitées</li>
+                                        <li>Personnalisation premium</li>
+                                        <li>Rapports en temps réel</li>
+                                        <li>Support dédié 24/7</li>
+                                        <li>Visibilité premium</li>
+                                        <li>Intégration API</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn btn-outline select-plan" data-plan="premium" data-price="149.99" data-commission="10">Sélectionner</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2: Informations de paiement -->
+                    <div class="payment-step-content" id="payment-step">
+                        <h2>Informations de paiement</h2>
+                        <p class="step-description">Entrez vos informations de paiement en toute sécurité. Vos données sont protégées par un cryptage SSL.</p>
+                        
+                        <div class="payment-summary">
+                            <h3>Récapitulatif de la commande</h3>
+                            <div class="summary-item">
+                                <span class="item-label">Forfait sélectionné:</span>
+                                <span class="item-value" id="selected-plan-name">Forfait Professionnel</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="item-label">Prix mensuel:</span>
+                                <span class="item-value" id="selected-plan-price">79,99 $ CA</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="item-label">Taux de commission:</span>
+                                <span class="item-value" id="selected-plan-commission">15%</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span class="item-label">Total à payer aujourd'hui:</span>
+                                <span class="item-value" id="total-amount">79,99 $ CA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-form-container">
+                            <form id="payment-form">
+                                <div class="form-section">
+                                    <h3>Informations de facturation</h3>
+                                    <div class="form-group">
+                                        <label for="billing-name">Nom complet</label>
+                                        <input type="text" id="billing-name" placeholder="Jean Dupont" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing-email">Email</label>
+                                        <input type="email" id="billing-email" placeholder="jean.dupont@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing-address">Adresse</label>
+                                        <input type="text" id="billing-address" placeholder="123 Rue Sainte-Catherine" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="billing-city">Ville</label>
+                                            <input type="text" id="billing-city" placeholder="Montréal" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="billing-province">Province</label>
+                                            <input type="text" id="billing-province" placeholder="QC" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="billing-postal">Code postal</label>
+                                            <input type="text" id="billing-postal" placeholder="H2X 1Z4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="billing-country">Pays</label>
+                                            <select id="billing-country" required>
+                                                <option value="CA" selected>Canada</option>
+                                                <option value="US">États-Unis</option>
+                                                <option value="FR">France</option>
+                                                <option value="BE">Belgique</option>
+                                                <option value="CH">Suisse</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h3>Informations de paiement</h3>
+                                    <div class="payment-methods">
+                                        <div class="payment-method-selector">
+                                            <label class="payment-method-option">
+                                                <input type="radio" name="payment-method" value="credit-card" checked>
+                                                <span class="method-label">Carte de crédit</span>
+                                            </label>
+                                            <label class="payment-method-option">
+                                                <input type="radio" name="payment-method" value="paypal">
+                                                <span class="method-label">PayPal</span>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="credit-card-form active" id="credit-card-form">
+                                            <div class="form-group">
+                                                <label for="card-number">Numéro de carte</label>
+                                                <div class="card-input-container">
+                                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                                    <div class="card-icons">
+                                                        <span class="card-icon visa">Visa</span>
+                                                        <span class="card-icon mastercard">MasterCard</span>
+                                                        <span class="card-icon amex">Amex</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="card-expiry">Date d'expiration</label>
+                                                    <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="card-cvc">CVC</label>
+                                                    <input type="text" id="card-cvc" placeholder="123" maxlength="4" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="card-name">Nom sur la carte</label>
+                                                <input type="text" id="card-name" placeholder="Jean Dupont" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="paypal-form" id="paypal-form">
+                                            <p class="paypal-info">Vous serez redirigé vers PayPal pour compléter votre paiement après avoir cliqué sur "Payer maintenant".</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <div class="form-group terms-checkbox">
+                                        <label>
+                                            <input type="checkbox" id="terms-checkbox" required>
+                                            J'accepte les <a href="#">conditions générales</a> et la <a href="#">politique de confidentialité</a> de Fimysolutions.
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-security-info">
+                                    <div class="security-icon">🔒</div>
+                                    <p>Toutes vos informations sont sécurisées et cryptées. Nous ne stockons jamais vos informations de carte complètes.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3: Confirmation -->
+                    <div class="payment-step-content" id="confirmation-step">
+                        <div class="confirmation-message">
+                            <div class="confirmation-icon">✓</div>
+                            <h2>Paiement réussi!</h2>
+                            <p>Votre abonnement au <span id="confirmed-plan-name">Forfait Professionnel</span> a été activé avec succès.</p>
+                            
+                            <div class="confirmation-details">
+                                <div class="confirmation-item">
+                                    <span class="item-label">Numéro de commande:</span>
+                                    <span class="item-value" id="order-number">FS-2025-04-22-1234</span>
+                                </div>
+                                <div class="confirmation-item">
+                                    <span class="item-label">Date:</span>
+                                    <span class="item-value" id="order-date">22 avril 2025</span>
+                                </div>
+                                <div class="confirmation-item">
+                                    <span class="item-label">Montant:</span>
+                                    <span class="item-value" id="order-amount">79,99 $ CA</span>
+                                </div>
+                                <div class="confirmation-item">
+                                    <span class="item-label">Méthode de paiement:</span>
+                                    <span class="item-value" id="payment-method">Carte de crédit (se terminant par 4567)</span>
+                                </div>
+                            </div>
+                            
+                            <p>Un reçu a été envoyé à votre adresse email. Votre prochain paiement sera automatiquement prélevé le 22 mai 2025.</p>
+                            
+                            <div class="next-steps">
+                                <h3>Prochaines étapes</h3>
+                                <ul>
+                                    <li>Accédez à votre tableau de bord pour commencer à créer vos cartes-cadeaux</li>
+                                    <li>Personnalisez votre profil d'entreprise pour attirer plus de clients</li>
+                                    <li>Explorez les outils de marketing pour promouvoir vos offres</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="confirmation-actions">
+                                <a href="card-customization.html" class="btn btn-primary">Créer ma première carte-cadeau</a>
+                                <a href="#" class="btn btn-outline">Aller au tableau de bord</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-navigation">
+                    <button class="btn btn-outline" id="prev-step" disabled>Précédent</button>
+                    <button class="btn btn-primary" id="next-step">Continuer vers le paiement</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fimysolutions</h3>
+                    <p>La plateforme de cartes-cadeaux pour des expériences locales authentiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="business-portal.html">Pour les entreprises</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@fimysolutions.com</p>
+                    <p>Téléphone: +1 800-555-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fimysolutions. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment-processing.js"></script>
+</body>
+</html>

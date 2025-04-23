@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Partenaire - Fimysolutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/partner-registration.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Fimysolutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="search.html">Recherche</a></li>
+                    <li><a href="business-portal.html" class="active">Pour les entreprises</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="partner-registration.html" class="active">FR</a>
+                <a href="en/partner-registration.html">EN</a>
+                <a href="es/partner-registration.html">ES</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="registration-hero">
+                <div class="registration-hero-content">
+                    <h1>Rejoignez Fimysolutions</h1>
+                    <p>Développez votre activité en proposant vos expériences à une clientèle engagée</p>
+                </div>
+            </section>
+
+            <section class="registration-container">
+                <div class="registration-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Informations de base</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Détails de l'entreprise</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Choix du forfait</div>
+                    </div>
+                </div>
+
+                <div class="registration-form-container">
+                    <form id="registration-form" class="registration-form">
+                        <!-- Étape 1: Informations de base -->
+                        <div class="form-step" id="step-1">
+                            <h2>Informations de base</h2>
+                            
+                            <div class="form-group">
+                                <label for="business-name">Nom de l'entreprise *</label>
+                                <input type="text" id="business-name" name="business-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-type">Type d'entreprise *</label>
+                                <select id="business-type" name="business-type" required>
+                                    <option value="">Sélectionnez un type</option>
+                                    <option value="hotel">Hôtel / Hébergement</option>
+                                    <option value="restaurant">Restaurant / Bar</option>
+                                    <option value="spa">Spa / Bien-être</option>
+                                    <option value="activity">Activité / Loisir</option>
+                                    <option value="package">Forfait / Agence</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-name">Nom du contact principal *</label>
+                                <input type="text" id="contact-name" name="contact-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email professionnel *</label>
+                                <input type="email" id="contact-email" name="contact-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-phone">Téléphone *</label>
+                                <input type="tel" id="contact-phone" name="contact-phone" required>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary next-step">Continuer</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Étape 2: Détails de l'entreprise -->
+                        <div class="form-step" id="step-2" style="display: none;">
+                            <h2>Détails de l'entreprise</h2>
+                            
+                            <div class="form-group">
+                                <label for="business-description">Description de l'entreprise *</label>
+                                <textarea id="business-description" name="business-description" rows="4" required></textarea>
+                                <div class="form-hint">Décrivez votre entreprise, vos services et ce qui vous rend unique (300 caractères max).</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-address">Adresse *</label>
+                                <input type="text" id="business-address" name="business-address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="business-city">Ville *</label>
+                                    <input type="text" id="business-city" name="business-city" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="business-postal-code">Code postal *</label>
+                                    <input type="text" id="business-postal-code" name="business-postal-code" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-province">Province *</label>
+                                <select id="business-province" name="business-province" required>
+                                    <option value="">Sélectionnez une province</option>
+                                    <option value="QC">Québec</option>
+                                    <option value="ON">Ontario</option>
+                                    <option value="BC">Colombie-Britannique</option>
+                                    <option value="AB">Alberta</option>
+                                    <option value="MB">Manitoba</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="NS">Nouvelle-Écosse</option>
+                                    <option value="NB">Nouveau-Brunswick</option>
+                                    <option value="NL">Terre-Neuve-et-Labrador</option>
+                                    <option value="PE">Île-du-Prince-Édouard</option>
+                                    <option value="NT">Territoires du Nord-Ouest</option>
+                                    <option value="YT">Yukon</option>
+                                    <option value="NU">Nunavut</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-website">Site web</label>
+                                <input type="url" id="business-website" name="business-website">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="business-logo">Logo de l'entreprise</label>
+                                <input type="file" id="business-logo" name="business-logo" accept="image/*">
+                                <div class="form-hint">Format recommandé: JPG ou PNG, 500x500px minimum.</div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline prev-step">Retour</button>
+                                <button type="button" class="btn btn-primary next-step">Continuer</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Étape 3: Choix du forfait -->
+                        <div class="form-step" id="step-3" style="display: none;">
+                            <h2>Choix du forfait</h2>
+                            
+                            <div class="pricing-plans">
+                                <div class="pricing-plan" data-plan="starter">
+                                    <div class="plan-header">
+                                        <h3>Débutant</h3>
+                                        <div class="plan-price">
+                                            <span class="price">29</span>
+                                            <span class="period">$ CA / mois</span>
+                                        </div>
+                                        <div class="plan-commission">Commission: 20%</div>
+                                    </div>
+                                    <div class="plan-features">
+                                        <ul>
+                                            <li>Jusqu'à 5 cartes-cadeaux</li>
+                                            <li>Personnalisation de base</li>
+                                            <li>Rapports mensuels</li>
+                                            <li>Support par email</li>
+                                        </ul>
+                                    </div>
+                                    <div class="plan-cta">
+                                        <button type="button" class="btn btn-outline select-plan" data-plan="starter">Sélectionner</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="pricing-plan recommended" data-plan="professional">
+                                    <div class="plan-badge">Recommandé</div>
+                                    <div class="plan-header">
+                                        <h3>Professionnel</h3>
+                                        <div class="plan-price">
+                                            <span class="price">79</span>
+                                            <span class="period">$ CA / mois</span>
+                                        </div>
+                                        <div class="plan-commission">Commission: 15%</div>
+                                    </div>
+                                    <div class="plan-features">
+                                        <ul>
+                                            <li>Cartes-cadeaux illimitées</li>
+                                            <li>Personnalisation avancée</li>
+                                            <li>Rapports hebdomadaires</li>
+                                            <li>Support prioritaire</li>
+                                            <li>Visibilité améliorée</li>
+                                        </ul>
+                                    </div>
+                                    <div class="plan-cta">
+                                        <button type="button" class="btn btn-primary select-plan" data-plan="professional">Sélectionner</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="pricing-plan" data-plan="premium">
+                                    <div class="plan-header">
+                                        <h3>Premium</h3>
+                                        <div class="plan-price">
+                                            <span class="price">149</span>
+                                            <span class="period">$ CA / mois</span>
+                                        </div>
+                                        <div class="plan-commission">Commission: 10%</div>
+                                    </div>
+                                    <div class="plan-features">
+                                        <ul>
+                                            <li>Tout du forfait Professionnel</li>
+                                            <li>Mise en avant sur la page d'accueil</li>
+                                            <li>Rapports personnalisés</li>
+                                            <li>Gestionnaire de compte dédié</li>
+                                            <li>Intégration API</li>
+                                        </ul>
+                                    </div>
+                                    <div class="plan-cta">
+                                        <button type="button" class="btn btn-outline select-plan" data-plan="premium">Sélectionner</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="selected-plan-info" style="display: none;">
+                                <h3>Forfait sélectionné: <span id="selected-plan-name">Professionnel</span></h3>
+                                <p>Prix: <span id="selected-plan-price">79 $ CA / mois</span></p>
+                                <p>Commission: <span id="selected-plan-commission">15%</span></p>
+                                
+                                <div class="form-group">
+                                    <label for="payment-method">Méthode de paiement *</label>
+                                    <select id="payment-method" name="payment-method" required>
+                                        <option value="">Sélectionnez une méthode</option>
+                                        <option value="credit-card">Carte de crédit</option>
+                                        <option value="paypal">PayPal</option>
+                                    </select>
+                                </div>
+                                
+                                <div id="credit-card-form" style="display: none;">
+                                    <div class="form-group">
+                                        <label for="card-number">Numéro de carte *</label>
+                                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-expiry">Date d'expiration *</label>
+                                            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="card-cvc">CVC *</label>
+                                            <input type="text" id="card-cvc" name="card-cvc" placeholder="123">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-name">Nom sur la carte *</label>
+                                        <input type="text" id="card-name" name="card-name">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="terms-agreement" name="terms-agreement" required>
+                                        <span class="checkmark"></span>
+                                        J'accepte les <a href="#">conditions générales</a> et la <a href="#">politique de confidentialité</a> de Fimysolutions.
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline prev-step">Retour</button>
+                                <button type="submit" class="btn btn-primary" id="submit-registration" disabled>Finaliser l'inscription</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="partner-benefits">
+                <h2>Pourquoi rejoindre Fimysolutions?</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                            </svg>
+                        </div>
+                        <h3>Visibilité accrue</h3>
+                        <p>Accédez à une clientèle qualifiée à la recherche d'expériences de qualité dans votre région.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+                            </svg>
+                        </div>
+                        <h3>Gestion simplifiée</h3>
+                        <p>Notre plateforme intuitive vous permet de gérer facilement vos offres, réservations et paiements.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 1 0 1H2.25A2.25 2.25 0 0 1 0 6.25v-.878a.5.5 0 0 1 .5-.5h1.5v-.5A4.002 4.002 0 0 1 8 1a4 4 0 0 1 4 4v.878a.5.5 0 0 1-.5.5H9v.5a.5.5 0 0 1-1 0v-.5H6v.5a.5.5 0 0 1-1 0v-.5H4.5v.5a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5V6H2.25A.75.75 0 0 0 1.5 6.75v.878a.75.75 0 0 0 .75.75H4.5z"/>
+                                <path d="M8 2.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM5.5 6a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Revenus additionnels</h3>
+                        <p>Générez des revenus supplémentaires en vendant vos expériences sous forme de cartes-cadeaux.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                            </svg>
+                        </div>
+                        <h3>Flexibilité totale</h3>
+                        <p>Choisissez le forfait qui vous convient et adaptez vos offres selon vos besoins et disponibilités.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="partner-testimonials">
+                <h2>Ce que disent nos partenaires</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Depuis que nous avons rejoint Fimysolutions, notre visibilité a considérablement augmenté. Nous avons accueilli de nouveaux clients qui n'auraient jamais découvert notre établissement autrement."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://source.unsplash.com/random/100x100/?portrait&sig=1" alt="Portrait de Marie Tremblay">
+                            <div class="author-info">
+                                <h4>Marie Tremblay</h4>
+                                <p>Spa Sérénité, Montréal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"La plateforme est incroyablement facile à utiliser. En quelques clics, nous pouvons créer et personnaliser nos cartes-cadeaux, suivre les ventes et gérer les réservations."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://source.unsplash.com/random/100x100/?portrait&sig=2" alt="Portrait de Jean Dupont">
+                            <div class="author-info">
+                                <h4>Jean Dupont</h4>
+                                <p>Restaurant La Table Gourmande, Québec</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Les cartes-cadeaux ont transformé notre activité. Nous avons vu une augmentation de 30% de notre chiffre d'affaires pendant les périodes creuses grâce à Fimysolutions."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://source.unsplash.com/random/100x100/?portrait&sig=3" alt="Portrait de Sophie Lavoie">
+                            <div class="author-info">
+                                <h4>Sophie Lavoie</h4>
+                                <p>Hôtel Vue sur Fleuve, Beauport</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="faq-section">
+                <h2>Questions fréquentes</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionne le système de commission?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Notre système de commission varie selon le forfait choisi. Pour le forfait Débutant, la commission est de 20%, pour le forfait Professionnel, elle est de 15%, et pour le forfait Premium, elle est de 10%. La commission est prélevée uniquement lorsqu'une carte-cadeau est vendue.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Puis-je modifier mon forfait après l'inscription?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez modifier votre forfait à tout moment depuis votre tableau de bord partenaire. Le changement prendra effet au début du prochain cycle de facturation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment les clients réservent-ils avec une carte-cadeau?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorsqu'un client achète une carte-cadeau, il reçoit un code unique. Pour réserver, il peut soit vous contacter directement en mentionnant ce code, soit utiliser notre système de réservation en ligne intégré à la plateforme.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quand et comment suis-je payé?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les paiements sont effectués deux fois par mois, le 1er et le 15. Vous recevez le montant des ventes moins la commission directement sur votre compte bancaire enregistré. Un rapport détaillé des transactions est disponible dans votre tableau de bord.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Puis-je limiter le nombre de cartes-cadeaux vendues?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous avez un contrôle total sur vos offres. Vous pouvez définir des quotas pour chaque carte-cadeau, des périodes de validité spécifiques, et même suspendre temporairement la vente en cas de forte demande.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2>Prêt à développer votre activité?</h2>
+                    <p>Rejoignez notre réseau de partenaires et commencez à proposer vos expériences dès aujourd'hui.</p>
+                    <a href="#registration-form" class="btn btn-primary">S'inscrire maintenant</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fimysolutions</h3>
+                    <p>La plateforme de cartes-cadeaux pour des expériences locales authentiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="business-portal.html">Pour les entreprises</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@fimysolutions.com</p>
+                    <p>Téléphone: +1 800-555-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fimysolutions. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal de succès -->
+    <div class="modal" id="success-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Inscription réussie!</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <p>Félicitations! Votre inscription a été complétée avec succès.</p>
+                    <p>Vous recevrez sous peu un email de confirmation avec vos identifiants de connexion et les prochaines étapes.</p>
+                    <div class="modal-actions">
+                        <a href="business-portal.html" class="btn btn-primary">Accéder au portail partenaire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/partner-registration.js"></script>
+</body>
+</html>

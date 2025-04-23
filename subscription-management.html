@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Abonnements - Fimysolutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/business-portal.css">
+    <link rel="stylesheet" href="css/subscription-management.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Fimysolutions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Expériences</a></li>
+                    <li><a href="business-portal.html">Pour les entreprises</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="subscription-management.html" class="active">FR</a>
+                <a href="en/subscription-management.html">EN</a>
+                <a href="es/subscription-management.html">ES</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="dashboard-header">
+                <h1>Tableau de bord entreprise</h1>
+                <div class="user-info">
+                    <span class="user-name">Restaurant La Belle Époque</span>
+                    <span class="user-plan">Forfait Professionnel</span>
+                </div>
+            </section>
+
+            <div class="dashboard-navigation">
+                <ul>
+                    <li><a href="#">Tableau de bord</a></li>
+                    <li><a href="card-customization.html">Cartes-cadeaux</a></li>
+                    <li><a href="#">Réservations</a></li>
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="#" class="active">Abonnement</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </div>
+
+            <section class="subscription-management-section">
+                <div class="section-header">
+                    <h2>Gestion de votre abonnement</h2>
+                </div>
+
+                <div class="subscription-container">
+                    <div class="current-plan-card">
+                        <div class="plan-header">
+                            <h3>Votre forfait actuel</h3>
+                            <div class="plan-badge">Actif</div>
+                        </div>
+                        <div class="plan-details">
+                            <div class="plan-name">Forfait Professionnel</div>
+                            <div class="plan-price">79,99 $ CA <span>/ mois</span></div>
+                            <div class="plan-commission">Commission: 15%</div>
+                            <div class="plan-renewal">Prochain renouvellement: 22 mai 2025</div>
+                            <div class="plan-status">Statut: Actif</div>
+                        </div>
+                        <div class="plan-features">
+                            <h4>Fonctionnalités incluses</h4>
+                            <ul>
+                                <li>Jusqu'à 15 cartes-cadeaux actives</li>
+                                <li>Personnalisation avancée</li>
+                                <li>Rapports détaillés</li>
+                                <li>Support prioritaire</li>
+                                <li>Visibilité améliorée</li>
+                            </ul>
+                        </div>
+                        <div class="plan-actions">
+                            <button class="btn btn-outline" id="change-plan-btn">Changer de forfait</button>
+                        </div>
+                    </div>
+
+                    <div class="payment-info-card">
+                        <div class="card-header">
+                            <h3>Informations de paiement</h3>
+                        </div>
+                        <div class="payment-method">
+                            <div class="payment-method-header">
+                                <h4>Mode de paiement actuel</h4>
+                                <button class="btn btn-small" id="edit-payment-btn">Modifier</button>
+                            </div>
+                            <div class="credit-card-info">
+                                <div class="card-icon">
+                                    <img src="images/visa-icon.png" alt="Visa" class="card-brand-icon">
+                                </div>
+                                <div class="card-details">
+                                    <div class="card-number">•••• •••• •••• 4567</div>
+                                    <div class="card-expiry">Expire: 09/26</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="billing-address">
+                            <h4>Adresse de facturation</h4>
+                            <address>
+                                Restaurant La Belle Époque<br>
+                                123 Rue Sainte-Catherine<br>
+                                Montréal, QC H2X 1Z4<br>
+                                Canada
+                            </address>
+                            <button class="btn btn-small btn-outline" id="edit-address-btn">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="billing-history">
+                    <h3>Historique de facturation</h3>
+                    <div class="table-responsive">
+                        <table class="billing-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Montant</th>
+                                    <th>Statut</th>
+                                    <th>Facture</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>22 avr. 2025</td>
+                                    <td>Forfait Professionnel - Abonnement mensuel</td>
+                                    <td>79,99 $ CA</td>
+                                    <td><span class="status-badge success">Payé</span></td>
+                                    <td><a href="#" class="invoice-link">Télécharger</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22 mars 2025</td>
+                                    <td>Forfait Professionnel - Abonnement mensuel</td>
+                                    <td>79,99 $ CA</td>
+                                    <td><span class="status-badge success">Payé</span></td>
+                                    <td><a href="#" class="invoice-link">Télécharger</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22 févr. 2025</td>
+                                    <td>Forfait Professionnel - Abonnement mensuel</td>
+                                    <td>79,99 $ CA</td>
+                                    <td><span class="status-badge success">Payé</span></td>
+                                    <td><a href="#" class="invoice-link">Télécharger</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22 janv. 2025</td>
+                                    <td>Forfait Professionnel - Abonnement mensuel</td>
+                                    <td>79,99 $ CA</td>
+                                    <td><span class="status-badge success">Payé</span></td>
+                                    <td><a href="#" class="invoice-link">Télécharger</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="commission-summary">
+                    <h3>Résumé des commissions</h3>
+                    <div class="commission-cards">
+                        <div class="commission-card">
+                            <div class="commission-value">15%</div>
+                            <div class="commission-label">Taux de commission actuel</div>
+                        </div>
+                        <div class="commission-card">
+                            <div class="commission-value">1 245,75 $ CA</div>
+                            <div class="commission-label">Commissions totales (année en cours)</div>
+                        </div>
+                        <div class="commission-card">
+                            <div class="commission-value">8 305,00 $ CA</div>
+                            <div class="commission-label">Ventes totales (année en cours)</div>
+                        </div>
+                    </div>
+                    <div class="commission-chart">
+                        <h4>Évolution des commissions (6 derniers mois)</h4>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="height: 40%;" data-month="Nov">
+                                    <div class="bar-value">145,50 $</div>
+                                </div>
+                                <div class="chart-bar" style="height: 60%;" data-month="Déc">
+                                    <div class="bar-value">218,25 $</div>
+                                </div>
+                                <div class="chart-bar" style="height: 75%;" data-month="Jan">
+                                    <div class="bar-value">272,85 $</div>
+                                </div>
+                                <div class="chart-bar" style="height: 55%;" data-month="Fév">
+                                    <div class="bar-value">200,10 $</div>
+                                </div>
+                                <div class="chart-bar" style="height: 65%;" data-month="Mar">
+                                    <div class="bar-value">236,55 $</div>
+                                </div>
+                                <div class="chart-bar" style="height: 80%;" data-month="Avr">
+                                    <div class="bar-value">291,30 $</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div class="modal" id="change-plan-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Changer de forfait</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="plans-container">
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Forfait Essentiel</h3>
+                                    <div class="plan-price">39,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 20%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Jusqu'à 5 cartes-cadeaux actives</li>
+                                        <li>Personnalisation de base</li>
+                                        <li>Rapports mensuels</li>
+                                        <li>Support par email</li>
+                                        <li>Visibilité standard</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn btn-outline select-plan" data-plan="essential">Sélectionner</button>
+                                </div>
+                            </div>
+                            <div class="plan-card featured">
+                                <div class="plan-badge">Actuel</div>
+                                <div class="plan-header">
+                                    <h3>Forfait Professionnel</h3>
+                                    <div class="plan-price">79,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 15%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Jusqu'à 15 cartes-cadeaux actives</li>
+                                        <li>Personnalisation avancée</li>
+                                        <li>Rapports détaillés</li>
+                                        <li>Support prioritaire</li>
+                                        <li>Visibilité améliorée</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn select-plan" data-plan="professional">Sélectionner</button>
+                                </div>
+                            </div>
+                            <div class="plan-card">
+                                <div class="plan-header">
+                                    <h3>Forfait Premium</h3>
+                                    <div class="plan-price">149,99 $ CA <span>/ mois</span></div>
+                                    <div class="commission-rate">Commission: 10%</div>
+                                </div>
+                                <div class="plan-features">
+                                    <ul>
+                                        <li>Cartes-cadeaux illimitées</li>
+                                        <li>Personnalisation premium</li>
+                                        <li>Rapports en temps réel</li>
+                                        <li>Support dédié 24/7</li>
+                                        <li>Visibilité premium</li>
+                                        <li>Intégration API</li>
+                                    </ul>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="btn btn-outline select-plan" data-plan="premium">Sélectionner</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline" id="cancel-plan-change">Annuler</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="edit-payment-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Modifier les informations de paiement</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="card-number">Numéro de carte</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Date d'expiration</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvc">CVC</label>
+                                    <input type="text" id="card-cvc" placeholder="123" maxlength="3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Nom sur la carte</label>
+                                <input type="text" id="card-name" placeholder="Jean Dupont">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline" id="cancel-payment-edit">Annuler</button>
+                        <button class="btn btn-primary" id="save-payment">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="edit-address-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Modifier l'adresse de facturation</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="address-form">
+                            <div class="form-group">
+                                <label for="company-name">Nom de l'entreprise</label>
+                                <input type="text" id="company-name" value="Restaurant La Belle Époque">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-line1">Adresse</label>
+                                <input type="text" id="address-line1" value="123 Rue Sainte-Catherine">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-line2">Complément d'adresse (optionnel)</label>
+                                <input type="text" id="address-line2">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Ville</label>
+                                    <input type="text" id="city" value="Montréal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="province">Province</label>
+                                    <input type="text" id="province" value="QC">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="postal-code">Code postal</label>
+                                    <input type="text" id="postal-code" value="H2X 1Z4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Pays</label>
+                                    <input type="text" id="country" value="Canada">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline" id="cancel-address-edit">Annuler</button>
+                        <button class="btn btn-primary" id="save-address">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fimysolutions</h3>
+                    <p>La plateforme de cartes-cadeaux pour des expériences locales authentiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="business-portal.html">Pour les entreprises</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@fimysolutions.com</p>
+                    <p>Téléphone: +1 800-555-1234</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fimysolutions. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/subscription-management.js"></script>
+</body>
+</html>
