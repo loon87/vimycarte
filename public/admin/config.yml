@@ -2,6 +2,10 @@ backend:
   name: git-gateway
   branch: master # Branche sur laquelle Netlify CMS va interagir
 
+media_folder: "static/images" # Dossier où sebackend:
+  name: git-gateway
+  branch: master # Branche sur laquelle Netlify CMS va interagir
+
 media_folder: "static/images" # Dossier où seront stockées les images
 public_folder: "/images"     # Dossier public accessible depuis l'URL
 
