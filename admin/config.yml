@@ -1,19 +1,19 @@
 backend:
   name: auth0
-  login: true
-  auth0:
-    domain: dev-60n23r4dd7ykzah3.us.auth0.com
-    client_id: sUgA2CwFyxsuXPXq6XUGQ5840OLUABsB
+  client_id: YOUR_AUTH0_CLIENT_ID
+  client_secret: YOUR_AUTH0_CLIENT_SECRET
+  domain: YOUR_AUTH0_DOMAIN
+  auth0_url: https://YOUR_AUTH0_DOMAIN.auth0.com
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: "static/images" # Dossier où seront stockées les images
+public_folder: "/images"     # Dossier public accessible depuis l'URL
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
+  - name: "blog" # Nom de la collection (exemple)
+    label: "Blog" # Nom affiché dans l'interface CMS
+    folder: "content/blog" # Dossier où les fichiers sont stockés dans ton repo
+    create: true # Permet la création de nouveaux articles
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" } # Champ titre
+      - { label: "Body", name: "body", widget: "markdown" } # Champ contenu (Markdown)
 
