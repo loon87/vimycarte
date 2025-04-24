@@ -1,4 +1,12 @@
 backend:
+  name: auth0
+  auth0:
+    client_id: sUgA2CwFyxsuXPXq6XUGQ5840OLUABsB # Remplace par ton CLIENT_ID Auth0
+    client_secret: TON_CLIENT_SECRET # Remplace par ton SECRET Auth0
+    domain: dev-60n23r4dd7ykzah3.us.auth0.com # Remplace par ton DOMAIN Auth0
+  branch: master
+nano public/admin/config.yml
+backend:
   name: git-gateway
   branch: master # Branche sur laquelle Netlify CMS va interagir
 
