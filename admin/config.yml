@@ -1,8 +1,7 @@
 backend:
-  name: auth0
-  client_id: YOUR_AUTH0_CLIENT_ID
-  client_secret: YOUR_AUTH0_CLIENT_SECRET
-  domain: YOUR_AUTH0_DOMAIN
+  name: git-gateway
+  branch: master
+
 
 media_folder: "static/images"
 public_folder: "/images"
