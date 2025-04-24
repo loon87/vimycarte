@@ -14,5 +14,21 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "emails"
+    label: "Emails"
+    folder: "emails"  # Chemin vers le répertoire emails créé à la racine
+    create: true
+    fields:
+      - { label: "Subject", name: "subject", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
 
