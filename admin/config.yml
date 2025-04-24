@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: master  # Branche sur laquelle Netlify CMS interagit avec ton dépôt Git
+
+media_folder: "static/images"  # Dossier où les images téléchargées seront stockées
+public_folder: "/images"      # Dossier public accessible depuis l'URL (images seront servies ici)
+
+collections:
+  - name: "blog"              # Nom interne de la collection
+    label: "Blog"             # Nom visible dans l'interface CMS
+    folder: "content/blog"    # Dossier où les fichiers seront stockés dans ton repo
+    create: true              # Permet la création de nouveaux articles via le CMS
+    fields:
+      - { label: "Title", name: "title", widget: "string" }     # Champ titre de l'article
+      - { label: "Body", name: "body", widget: "markdown" }     # Champ contenu de l'article (en Markdown)
