@@ -1,0 +1,17 @@
+
+stackbitVersion: ~0.5.0
+contentSources:
+  - type: git
+    name: content
+    models:
+      - name: blog
+        label: Blog Post
+        folder: content/blog
+        path: '{{slug}}.md'
+        fields:
+          - name: title
+            type: string
+          - name: body
+            type: markdown
+        page: true
+        urlPath: /blog/{{slug}}
